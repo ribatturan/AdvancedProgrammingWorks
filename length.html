@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" href="https://blm-fsmvu.github.io/305/images/icon192.png">
+    <title>sayac </title>
+
+  <style> /* CSS comment */
+    body { max-width: 440px; }
+    #inp { width: 50px }
+    #out {
+        font-size: 18px;
+        background: blue;
+        color: white;
+        text-align: center;
+        padding: 10px;
+    }
+  </style>
+</head>
+
+<body>   <!-- HTML comment: Modify all items marked xxx -->
+
+<h2 id=title>This text is not shown. Why?</h2>
+ilk deger 
+<input type=number id=inp value=0 onChange="out.innerText=value">
+&emsp;
+<input type=button value=arttir onClick="increment()">
+<p id=out>This text is not shown. Why?</p>
+<input type=button value=inchToCm onClick="inch_to_cm()">
+<input type=button value=cmToInch onClick="cm_to_inch()">
+<hr />
+<b>Sample code</b>
+<pre id=sample>This text is not shown. Why?</pre>
+
+<hr />
+<p>Ref: <a href="https://www.w3schools.com/js/" 
+   target="NewTab">JS Tutorial</a>
+</p>
+
+<script>
+"use strict";
+// JavaScript comment
+function increment() {
+    let c = 2.54*Number(out.innerText);
+    console.log("counter = "+c);
+    out.innerText = c;
+}
+function inch_to_cm() {
+var v_in=document.getElementById("inp").value;
+var v_cm=v_in*2.54;
+document.getElementById("out").value=v_cm;
+out.innerText=v_cm;
+}
+
+function cm_to_inch() {
+var v_cm=document.getElementById("inp").value;
+var v_in=v_cm*0.39370079;
+document.getElementById("out").value=v_in;
+out.innerText=v_in;
+}
+
+    //global variable id is the HTML element with id 
+    //const title = document.getElementById("title");
+    title.innerText = document.title;
+    sample.innerText = increment.toString();
+    out.innerText = 0; increment();
+    cm_to_inch(); inch_to_cm();
+</script>
+
+</body>
+</html>
