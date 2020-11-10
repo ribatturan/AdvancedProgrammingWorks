@@ -30,15 +30,17 @@ function fileSelect() {
     .then(checkFiles) //called with Blob b
 }
 function checkFiles(b) {
-
+    
     let a = [...local.files]
-    let RDR = new FileReader();
- RDR.onloadend = function() { 
-     console.log(RDR.result)
-     
- };
-    RDR.readAsDataURL(a[0]);
-    out.innerText += 'Implement this '
+    let msg1 = a.length+' items checked \n'
+    let msg2 = 'all files are different.'
+    for(let x of a)
+        if (x.size == b.size && x.type == b.type){
+            msg2 = x.name+' is the same'; 
+            break
+        }
+        out.innerText = msg1+msg2
+    
 }
 
 
