@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Event Listeners</title>
+
+  <style> /* CSS comment */
+    body { max-width: 440px; }
+    #url { width: 190px; }
+    span, #url { color: blue; }
+  </style>
+</head>
+
+<body>   <!-- HTML comment: Modify all items marked xxx -->
+
+<h2 id=title title="Modify xxx"></h2>
+<p title="Battery level">
+  Battery level: <span id=level>??</span>
+</p>
+
+<p title = "Online Status"> Online Status: <span id = status> </span></p>
+
+<p title = "Keyboard"> Keyboard: <span id = key> </span></p>
+<hr />
+<b>Sample code</b>
+<pre id=sample>This text is not shown. Why?</pre>
+
+<hr />
+
+<script>
+"use strict";
+// JavaScript comment
+//navigator.getBattery().then(x => b = x)
+function listen(){
+  window.addEventListener("online",event =>{
+
+status.innerText= window.ononline;
+});
+
+onkeydown = event => {
+    key.innerText = event.key+""
+  
+  
+
+}
+
+onkeyup = event => {
+  key.innerText =""
+}
+}
+
+
+
+function init() {
+
+    navigator.getBattery().then(b => 
+      level.innerText = 100*b.level+'% \n'+ "level change:"+b.onlevelchange+
+      '\n'+"charging?:"+b.charging
+      
+    )
+}
+    title.innerText = document.title;
+    sample.innerText = init+'\n'+listen;
+    init();
+    listen();
+</script>
+
+</body>
+</html>
