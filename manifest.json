@@ -1,7 +1,7 @@
 {
   "name": "AdvancedProgWorks",
   "short_name": "ADP",
-  "start_url": "works.html",
+  "start_url": "AdvancedProgrammingWorks/works.html",
   "display": "standalone",
   "background_color": "white",
   "theme-color": "orange",
