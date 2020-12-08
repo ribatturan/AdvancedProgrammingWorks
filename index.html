@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="JS.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="manifest" href="manifest.json">
+    
+    <title>Ahmet Ribat JavaScript Things</title>
+</head>
+<style>
+    
+    body{
+            padding: 100px;
+    }
+
+    @media screen and (max-width: 992px) {
+        body{
+            padding: 10px;
+        }
+    }
+    
+
+    li{
+        background: rgb(179, 173, 173);   
+        font-weight: 600;
+        list-style-type: none;
+        text-align: center;
+        margin-top: 5px;
+    }
+
+    a li{
+        color: black;
+        font-size: large;
+    }
+
+</style>
+<body>
+    <h1 style="text-align: center;">Ahmet Ribat Turan </h1>
+    <h4 style="text-align: center;"><a href="https://github.com/ribatturan/AdvancedProgrammingWorks/"> Github Repo</a><h6>
+    <ul id=links></ul>
+</body>
+
+<script>navigator.serviceWorker.register('sw.js')</script>
+
+    <script>
+        let data = [
+            {
+                name:'PROJECT - SOON',
+                link:'https://github.com/ribatturan/AdvancedProgrammingWorks/'
+            },
+            {
+                name:'CW13 - OPEN WEATHER',
+                link:'https://ribatturan.github.io/AdvancedProgrammingWorks/CW13/havaDurumRibo.html'
+            },
+            {
+                name:'CW12 - GITHUB USERS',
+                link:'https://ribatturan.github.io/AdvancedProgrammingWorks/CW12/GitHub_Users.html'
+            },
+            {
+                name:'CW11 - EVENT LISTENER',
+                link:'https://ribatturan.github.io/AdvancedProgrammingWorks/CW11/CWlistener.html'
+            },
+            {
+                name:'CW10 - ARRAY BUFFER AND CRYPTO',
+                link:'https://ribatturan.github.io/AdvancedProgrammingWorks/CW10/Crypto.html'
+            },
+            {
+                name:'CW9 - PAGE MADE BY JS',
+                link:'https://ribatturan.github.io/AdvancedProgrammingWorks/CW9/JS_counter.html'
+            },
+            {
+                name:'CW8 - FILE OPERATIONS',
+                link:'https://ribatturan.github.io/AdvancedProgrammingWorks/CW8/FileCheck.html'
+            },
+            {
+                name: 'CW7 - STUDENT DATABASE', 
+                link: 'https://ribatturan.github.io/AdvancedProgrammingWorks/CW7/Student_Database.html'
+            },
+            {
+                name:'CW6 - CALLBACK AND PROMISE',
+                link: 'https://ribatturan.github.io/AdvancedProgrammingWorks/CW6/Async.html'
+            },
+            {
+                name: 'CW5 - INSPECTOR MENU',
+                link: 'https://ribatturan.github.io/AdvancedProgrammingWorks/CW5/work/Inspector.html'
+            },
+            {
+                name: 'CW4 - OBJECT LIST',
+                link: 'https://ribatturan.github.io/AdvancedProgrammingWorks/CW4/ObjectList.html'
+            },
+            {
+                name: 'CW3 - OBJECT AND ARRAYS',
+                link: 'https://ribatturan.github.io/AdvancedProgrammingWorks/CW3/chap4.html'
+            },            
+            {
+                name: 'HW1 - POISSON TABLE',
+                link: 'https://ribatturan.github.io/AdvancedProgrammingWorks/HW1/PoissonHomeWork.html'
+            },
+            {
+                name: 'HW2 - STUDENT DATABASE',
+                link: 'https://ribatturan.github.io/AdvancedProgrammingWorks/HW2/StdDatabaseHW2AhmetRibatTuran.html'
+            },
+            {
+                name: 'HW3 - ANIMATIONS',
+                link: 'https://github.com/ribatturan/AdvancedProgrammingWorks/'
+            },
+
+        ]
+
+        links.innerHTML = data.map((link) => `<a href='${link.link}'><li> ${link.name}</li></a>`).join("");
+    </script>
+
+</html>
