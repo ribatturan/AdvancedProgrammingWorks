@@ -1,0 +1,15 @@
+{
+  "name": "AdvancedProgWorks",
+  "short_name": "ADP",
+  "start_url": "works.html",
+  "display": "standalone",
+  "background_color": "white",
+  "theme-color": "orange",
+  "icons": [
+    {
+      "src": "JS.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
