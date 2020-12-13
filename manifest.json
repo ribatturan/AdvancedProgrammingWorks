@@ -7,7 +7,7 @@
   "theme-color": "orange",
   "icons": [
     {
-      "src": "JS.png",
+      "src": "rbtIcon.png",
       "sizes": "192x192",
       "type": "image/png"
     }
