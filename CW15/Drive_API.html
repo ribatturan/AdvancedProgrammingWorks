@@ -9,6 +9,14 @@
 
   <style>
     body {max-width: 540px;}
+    b{
+      border: 1px solid;
+      color:red;
+      padding: 3px;
+      cursor: pointer;
+
+
+    }
     img {
         position: fixed;
         top:8px; right:8px;
@@ -38,7 +46,7 @@
 <button id=upload disabled onclick="button.click()">Upload</button>
 &nbsp;<span id=user></span>
 <pre id=out></pre>
-<pre id = out></pre>
+<pre id = data></pre>
 
 <script src="https://apis.google.com/js/api.js"></script>
 <script>
@@ -54,13 +62,15 @@ function stringify(m) {
 }
 function log(m) {
     if (m.result) { log(m.result); return }
-    console.log(m); //out.style.color = ''
+    console.log(m); 
+    out.style.color = ''
     out.innerText = stringify(m)
 }
 function error(e) {
     if (e.result) { error(e.result); return }
     if (e.error) { error(e.error); return }
-    console.error(e); //out.style.color = 'red'
+    console.error(e); 
+    out.style.color = 'red'
     out.innerText = stringify(e)
 }
 async function authenticate() {
