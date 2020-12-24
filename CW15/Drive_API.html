@@ -99,6 +99,7 @@ function report(response) {
     let a = f.map(fileToString)
     out.innerHTML = a.join('\n'); console.log(f)
     files = f.map(x => x.id+' '+x.name)
+    data.innerText = ''
 }
 function fileToString(x) {
     let [d, h, m] = x.modifiedTime.split(/[T:]/)
