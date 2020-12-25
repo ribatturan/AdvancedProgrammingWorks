@@ -24,7 +24,7 @@ h1 {
   grid-template-rows: repeat(7, 1fr);
   height: 700px;
   margin: 10px 0 25px;
-  width: 700px;
+  max-width: 100%;
 }
 
 .cell {
@@ -83,7 +83,7 @@ h1 {
   align-items: center;
   display: flex;
   justify-content: space-between;
-  width: 700px;
+  min-width: 100%;
 }
 
 .reset {
