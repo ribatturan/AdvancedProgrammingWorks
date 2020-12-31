@@ -10,12 +10,13 @@ body {
   display: flex;
   flex-direction: column;
   font-family: sans-serif;
-  padding: 25px;
+  padding: 5px;
   width: 100%;
 }
 
 h1 {
   text-transform: uppercase;
+  text-align: center;
 }
 
 .game-board {
